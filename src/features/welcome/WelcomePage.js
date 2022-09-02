@@ -1,20 +1,17 @@
 import LottieView from 'lottie-react-native';
-import {
-    ImageBackground,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import AppBackground from '../../shared/components/AppBackground';
+import FormButton from '../../shared/components/FormButton';
 import MainContainer from '../../shared/components/MainContainer';
 
 const WelcomePage = () => {
     return (
         <MainContainer>
-            <ImageBackground
-                source={require('../../../assets/img/background.jpg')}
-                resizeMode="cover"
-                style={styles.background}
+            <AppBackground
+                style={{
+                    justifyContent: 'space-evenly',
+                    alignItems: 'center',
+                }}
             >
                 <LottieView
                     autoPlay
@@ -26,10 +23,8 @@ const WelcomePage = () => {
                     <Text style={styles.title}>POS System</Text>
                     <Text style={styles.subtitle}>Simple Point Of Sales</Text>
                 </View>
-                <TouchableOpacity style={styles.button} onPress={() => {}}>
-                    <Text style={styles.textButton}>Sign In</Text>
-                </TouchableOpacity>
-            </ImageBackground>
+                <FormButton label="Sign In" onClick={() => {}} />
+            </AppBackground>
         </MainContainer>
     );
 };

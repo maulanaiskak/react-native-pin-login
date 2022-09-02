@@ -1,60 +1,36 @@
 import { useState } from 'react';
-import {
-    ImageBackground,
-    Pressable,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import AppBackground from '../../shared/components/AppBackground';
+import FormButton from '../../shared/components/FormButton';
+import FormInput from '../../shared/components/FormInput';
+import FormPassword from '../../shared/components/FormPassword';
 import MainContainer from '../../shared/components/MainContainer';
-import Entypo from '@expo/vector-icons/Entypo';
+import TitleLabel from '../../shared/components/TitleLabel';
 
 const LoginPage = () => {
     const [userName, onChangeUserName] = useState('');
     const [password, onChangePassword] = useState('');
-    const [hidePass, setHidePass] = useState(true);
 
     return (
         <MainContainer>
-            <ImageBackground
-                source={require('../../../assets/img/background.jpg')}
-                resizeMode="cover"
-                style={styles.background}
-            >
+            <AppBackground>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Welcome!</Text>
+                    <TitleLabel subTitle text="Welcome!" />
                 </View>
                 <View style={styles.form}>
-                    <TextInput
-                        keyboardType="email-address"
-                        style={styles.input}
-                        onChangeText={onChangeUserName}
-                        value={userName}
+                    <FormInput
                         placeholder="Input your email"
+                        onChangeValue={onChangeUserName}
+                        value={userName}
                     />
-                    <View style={[styles.input, styles.inputPasswordContainer]}>
-                        <TextInput
-                            secureTextEntry={hidePass}
-                            onChangeText={onChangePassword}
-                            value={password}
-                            placeholder="Input your password"
-                            style={{ width: '100%' }}
-                        />
-                        <Pressable onPress={() => setHidePass(!hidePass)}>
-                            <Entypo
-                                name={hidePass ? 'eye-with-line' : 'eye'}
-                                size={20}
-                                color="black"
-                            />
-                        </Pressable>
-                    </View>
+                    <FormPassword
+                        placeholder="Input your password"
+                        onChangeValue={onChangePassword}
+                        value={password}
+                    />
                 </View>
-                <TouchableOpacity style={styles.button} onPress={() => {}}>
-                    <Text style={styles.textButton}>Login</Text>
-                </TouchableOpacity>
-            </ImageBackground>
+                <FormButton label="Login" onClick={() => {}} />
+            </AppBackground>
         </MainContainer>
     );
 };
@@ -102,9 +78,9 @@ const styles = StyleSheet.create({
         color: '#fff',
     },
     inputPasswordContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        paddingRight:24
-    }
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingRight: 24,
+    },
 });
 export default LoginPage;
