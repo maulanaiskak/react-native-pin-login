@@ -34,7 +34,7 @@ const PinPage = () => {
     }, [route.params.prevPage]);
 
     useEffect(() => {
-        console.log(pin);
+        console.log('PIN : ', pin);
     }, [pin]);
 
     const renderItem = ({ item }) => {
@@ -89,6 +89,8 @@ const PinPage = () => {
                 <FormButton
                     label={'Submit'}
                     onClick={() => {
+                        setPin('')
+                        setMaskedPin('')
                         navigation.reset({
                             index: 0,
                             routes: [
