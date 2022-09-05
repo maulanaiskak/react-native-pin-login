@@ -55,8 +55,7 @@ const styling = (theme) =>
             borderWidth: 2,
             borderRadius: 40,
             justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 40,
+            alignItems: 'center'
         },
     });
 export default PinItem;
