@@ -16,8 +16,8 @@ const shuffle = (array) => {
 const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 const PinPage = () => {
-    const [pin, setPin] = useState([]);
-    const [maskedPin, setMaskedPin] = useState([]);
+    const [pin, setPin] = useState('');
+    const [maskedPin, setMaskedPin] = useState('');
     const theme = useTheme();
     const styles = styling(theme);
     const navigation = useNavigation();
@@ -55,7 +55,7 @@ const PinPage = () => {
             const startIndex = i * 3;
             const endIndex = i * 3 + 3;
             const dataNumber = numbers.slice(startIndex, endIndex);
-            let contentStyle = { flex: 1, justifyContent: 'space-evenly'};
+            let contentStyle = { flex: 1, justifyContent: 'space-evenly' };
             if (dataNumber.length % 3 !== 0) {
                 const lastNumber = dataNumber[0];
                 dataNumber = ['c', lastNumber, 'x'];
@@ -101,7 +101,7 @@ const PinPage = () => {
                     }}
                 ></FormButton>
             </View>
-            <View style={{flex:3/4}}>{renderKeyNumber()}</View>
+            <View style={{ flex: 3 / 4 }}>{renderKeyNumber()}</View>
         </MainContainer>
     );
 };

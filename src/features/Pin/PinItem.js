@@ -1,6 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../../shared/context/ThemeContext';
 
 const PinItem = ({ number, pin, setPin, maskedPin, setMaskedPin }) => {
@@ -26,25 +25,25 @@ const PinItem = ({ number, pin, setPin, maskedPin, setMaskedPin }) => {
     };
 
     return (
-            <TouchableOpacity
-                onPress={() => {
-                    if (number == 'x') {
-                        setPin(pin.slice(0, -1));
-                        setMaskedPin(maskedPin.slice(0, -1));
-                    } else if (number == 'c') {
-                        setPin([]);
-                        setMaskedPin([]);
-                    } else {
-                        if (pin.length > 5) {
-                            return;
-                        }
-                        setPin([...pin, number]);
-                        setMaskedPin([...maskedPin, '*']);
+        <TouchableOpacity
+            onPress={() => {
+                if (number == 'x') {
+                    setPin(pin.substring(0, pin.length - 1));
+                    setMaskedPin(maskedPin.substring(0, maskedPin.length - 1));
+                } else if (number == 'c') {
+                    setPin('');
+                    setMaskedPin('');
+                } else {
+                    if (pin.length > 5) {
+                        return;
                     }
-                }}
-            >
-                <View style={styles.circularMenu}>{icon(number)}</View>
-            </TouchableOpacity>
+                    setPin(pin + number);
+                    setMaskedPin(maskedPin + '*');
+                }
+            }}
+        >
+            <View style={styles.circularMenu}>{icon(number)}</View>
+        </TouchableOpacity>
     );
 };
 const styling = (theme) =>
@@ -57,7 +56,7 @@ const styling = (theme) =>
             borderRadius: 40,
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop:40
+            marginTop: 40,
         },
     });
 export default PinItem;
