@@ -33,10 +33,6 @@ const PinPage = () => {
         }
     }, [route.params.prevPage]);
 
-    useEffect(() => {
-        console.log('PIN : ', pin);
-    }, [pin]);
-
     const renderItem = ({ item }) => {
         return (
             <PinItem
