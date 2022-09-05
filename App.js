@@ -1,10 +1,10 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import AppRouter from './src/navigation/AppRouter';
-import { serviceFactory } from './src/services/ServiceFactory';
-import { DependencyProvider } from './src/shared/context/DependencyContext';
-import { ThemeProvider } from './src/shared/context/ThemeContext';
-import useAppFont from './src/shared/hook/UseAppFont';
+import {SafeAreaProvider} from "react-native-safe-area-context";
+import {ThemeProvider} from "./src/shared/context/ThemeContext";
+import useAppFont from "./src/shared/hook/UseAppFont";
+import {NavigationContainer} from "@react-navigation/native";
+import AppRouter from "./src/navigation/AppRouter";
+import {serviceFactory} from "./src/services/ServiceFactory";
+import {DependencyProvider} from "./src/shared/context/DependencyContext";
 
 export default function App() {
     const fonts = useAppFont();
@@ -17,11 +17,10 @@ export default function App() {
             <SafeAreaProvider>
                 <ThemeProvider>
                     <NavigationContainer>
-                        <AppRouter />
+                        <AppRouter/>
                     </NavigationContainer>
                 </ThemeProvider>
             </SafeAreaProvider>
         </DependencyProvider>
     );
 }
-
