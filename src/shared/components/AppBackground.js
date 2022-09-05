@@ -1,5 +1,5 @@
 import {ImageBackground, StyleSheet} from 'react-native';
-import { useTheme } from '../context/ThemeContext';
+import {useTheme} from "../context/ThemeContext";
 
 const AppBackground = ({children, style}) => {
     const theme = useTheme();

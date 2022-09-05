@@ -1,8 +1,9 @@
-import { StatusBar, StyleSheet, View } from 'react-native';
-const MainContainer = ({ children }) => {
+import {StatusBar, StyleSheet, View} from 'react-native';
+
+const MainContainer = ({children}) => {
     return (
         <View style={styles.container}>
-            <StatusBar barStyle="dark-content" backgroundColor={'white'} />
+            <StatusBar barStyle="dark-content" backgroundColor={'white'}/>
             {children}
         </View>
     );
@@ -14,6 +15,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'stretch',
         justifyContent: 'flex-start',
-    },
+    }
 });
 export default MainContainer;

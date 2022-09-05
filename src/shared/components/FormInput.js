@@ -1,6 +1,5 @@
 import {StyleSheet, TextInput} from 'react-native';
-import { useTheme } from '../context/ThemeContext';
-
+import {useTheme} from "../context/ThemeContext";
 
 const FormInput = ({value, onChangeValue, placeholder='', keyboard = 'default'}) => {
     const theme = useTheme();
@@ -26,7 +25,8 @@ const styling = (theme) => StyleSheet.create({
         borderRadius: theme.radius.m,
         padding: theme.spacing.s,
         backgroundColor: theme.colors.secondary,
-        borderColor:theme.colors.foreground
+        borderColor:theme.colors.foreground,
+        fontFamily:'Poppins-Regular'
     }
 });
 export default FormInput;
