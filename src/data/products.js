@@ -1,130 +1,106 @@
 export const DATA = [
     {
         id: '123',
-        productName: 'sabun',
+        productName: 'sabun'
     },
     {
         id: '234',
-        productName: 'odol',
+        productName: 'odol'
     },
     {
         id: '456',
-        productName: 'panadol',
+        productName: 'panadol'
     },
     {
         id: '777',
-        productName: 'Kecap manis',
+        productName: 'Kecap manis'
     },
     {
         id: '888',
-        productName: 'Gula',
+        productName: 'Gula'
     },
     {
         id: '999',
-        productName: 'mie instan',
+        productName: 'mie instan'
     },
     {
         id: '101',
-        productName: 'telor',
+        productName: 'telor'
     },
     {
         id: '102',
-        productName: 'Keju',
+        productName: 'Keju'
     },
     {
         id: '103',
-        productName: 'Sikat gigi',
+        productName: 'Sikat gigi'
     },
     {
         id: '104',
-        productName: 'Kamper',
+        productName: 'Kamper'
     },
     {
         id: '105',
-        productName: 'Selai',
+        productName: 'Selai'
     },
     {
         id: '106',
-        productName: 'Roti',
+        productName: 'Roti'
     },
     {
         id: '110',
-        productName: 'Teh celup',
+        productName: 'Teh celup'
     },
     {
         id: '107',
-        productName: 'Susu',
+        productName: 'Susu'
     },
     {
         id: '108',
-        productName: 'Sabun mandi',
+        productName: 'Sabun mandi'
     },
     {
         id: '109',
-        productName: 'Garam',
+        productName: 'Garam'
     },
     {
-        id: '129',
-        productName: 'sabun',
+        id: '209',
+        productName: 'Obat pusing'
     },
     {
-        id: '239',
-        productName: 'odol',
+        id: '210',
+        productName: 'Obat Maag'
     },
     {
-        id: '459',
-        productName: 'panadol',
+        id: '211',
+        productName: 'Sereal'
     },
     {
-        id: '779',
-        productName: 'Kecap manis',
+        id: '212',
+        productName: 'Minyak Goreng'
     },
     {
-        id: '889',
-        productName: 'Gula',
+        id: '213',
+        productName: 'Tepung'
     },
     {
-        id: '990',
-        productName: 'mie instan',
+        id: '214',
+        productName: 'Coklat'
     },
     {
-        id: '10239',
-        productName: 'telor',
+        id: '215',
+        productName: 'Tepung roti'
     },
     {
-        id: '10d19',
-        productName: 'Keju',
+        id: '216',
+        productName: 'Roti tawar'
     },
     {
-        id: '1032e29',
-        productName: 'Sikat gigi',
+        id: '217',
+        productName: 'Selai Coklat'
     },
     {
-        id: '10119',
-        productName: 'Kamper',
-    },
-    {
-        id: '109dw',
-        productName: 'Selai',
-    },
-    {
-        id: '10922',
-        productName: 'Roti',
-    },
-    {
-        id: '119',
-        productName: 'Teh celup',
-    },
-    {
-        id: '1029',
-        productName: 'Susu',
-    },
-    {
-        id: '1092',
-        productName: 'Sabun mandi',
-    },
-    {
-        id: '1019',
-        productName: 'Garam',
-    },
+        id: '218',
+        productName: 'Pasta'
+    }
 ];

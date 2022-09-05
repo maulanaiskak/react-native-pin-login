@@ -1,6 +1,6 @@
 import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {FontAwesome} from "@expo/vector-icons";
-import {useTheme} from "../../../shared/context/ThemeContext";
+import {useTheme} from "../../../../shared/context/ThemeContext";
 
 const MenuItem = ({product}) => {
     const theme = useTheme();
@@ -8,7 +8,7 @@ const MenuItem = ({product}) => {
     return (
         <TouchableOpacity style={{alignItems: 'center'}}>
             <View style={styles.circularMenu}>
-                <FontAwesome name={product.icon} size={32} color="black"/>
+                <FontAwesome name={product.icon} size={32} color={theme.colors.foreground}/>
             </View>
             <Text>{product.menu}</Text>
         </TouchableOpacity>
@@ -24,7 +24,7 @@ const styling = (theme) => StyleSheet.create({
         overflow: 'hidden',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 8
+        margin: theme.spacing.s,
     }
 })
 export default MenuItem

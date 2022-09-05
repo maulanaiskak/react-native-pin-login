@@ -3,6 +3,7 @@ import {useTheme} from "../context/ThemeContext";
 
 const AppBackground = ({children, style}) => {
     const theme = useTheme();
+    const styles = styling(theme);
     return (
         <ImageBackground source={theme.background} resizeMode="cover"
                          style={[styles.container, style]}>
@@ -11,9 +12,14 @@ const AppBackground = ({children, style}) => {
     );
 };
 
-const styles = StyleSheet.create({
+const styling = (theme) => StyleSheet.create({
     container: {
-        flex: 1,
+        padding: theme.spacing.m,
+        position:'absolute',
+        top:0,
+        left:0,
+        right:0,
+        bottom:0
     }
 });
 export default AppBackground;
