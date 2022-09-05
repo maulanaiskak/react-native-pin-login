@@ -1,3 +1,4 @@
 1. stack navigator
 2. stack screen
 3. navigation tak perlu url karena mobile gada. navigation replace -> hapus stack2
+4. translucent view -> bg sampe status bar

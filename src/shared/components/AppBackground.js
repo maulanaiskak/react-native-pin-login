@@ -14,7 +14,8 @@ const AppBackground = ({children, style}) => {
 
 const styling = (theme) => StyleSheet.create({
     container: {
-        padding: theme.spacing.m,
+        paddingTop: theme.spacing.m,
+        paddingHorizontal:theme.spacing.s,
         position:'absolute',
         top:0,
         left:0,

@@ -5,7 +5,7 @@ import {StatusBar} from "expo-status-bar";
 const MainContainer = ({children}) => {
     return (
         <SafeAreaView style={styles.container}>
-            <StatusBar translucent style="auto"/>
+            <StatusBar translucent style="auto"/> 
             {children}
         </SafeAreaView>
     );

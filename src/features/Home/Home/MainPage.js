@@ -1,6 +1,6 @@
 import { FontAwesome } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
-import { useState } from 'react';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { useEffect, useState } from 'react';
 import {
     ScrollView,
     StyleSheet,
@@ -22,6 +22,12 @@ const MainPage = () => {
     const styles = styling(theme);
     const navigation = useNavigation();
     const [modalVisible, setModalVisible] = useState(false);
+    const route = useRoute();
+    useEffect(() => {
+        if (route.params?.message) {
+            console.log(route.params?.message);
+        }
+    }, [route.params]);
 
     return (
         <MainContainer>
@@ -77,7 +83,9 @@ const MainPage = () => {
                                 <TouchableOpacity
                                     style={styles.touchAble}
                                     onPress={() => {
-                                        navigation.navigate(ROUTE.PIN);
+                                        navigation.navigate(ROUTE.PIN, {
+                                            prevPage: ROUTE.HOME,
+                                        });
                                     }}
                                 >
                                     <FontAwesome
